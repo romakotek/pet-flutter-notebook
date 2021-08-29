@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "539574024096",
+    "project_id": "flutter-notebook-a288a",
+    "storage_bucket": "flutter-notebook-a288a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539574024096:android:1ef7d48ab03ad3149c96c5",
+        "android_client_info": {
+          "package_name": "com.burabayev.flutter_notebook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "539574024096-c5g964mc580a2a45clpe12ipshhtnfaj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAac393NAuRLZUlXjtqASg03N4KxYD7Gk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "539574024096-c5g964mc580a2a45clpe12ipshhtnfaj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
