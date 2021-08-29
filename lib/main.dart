@@ -8,7 +8,7 @@ void main() async {
   await Firebase.initializeApp();
 
   runApp(MaterialApp(
-    theme: ThemeData(primaryColor: Colors.indigoAccent),
+    theme: ThemeData(primaryColor: Colors.deepPurple[500]),
     initialRoute: '/',
     routes: {
       '/': (context) => MainPage(),

@@ -17,13 +17,14 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.yellowAccent[100],
       appBar: AppBar(
         title: Text('Notebook'),
         centerTitle: true,
         actions: [
           // Создаем иконку в шапке
           IconButton(
-            icon: Icon(Icons.add),
+            icon: Icon(Icons.add, size: 30, semanticLabel: 'Add'),
             onPressed: () {
               // При нажатии переходим на другую страницу
               Navigator.pushNamed(context, '/additem');
@@ -41,14 +42,16 @@ class _MainPageState extends State<MainPage> {
                 return Dismissible(
                     key: Key(snapshot.data!.docs[index].id),
                     child: Card(
+                      color: Colors.yellow[100],
                       child: ListTile(
                         title: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(snapshot.data!.docs[index].get('title')),
-                                Text(snapshot.data!.docs[index].get('text'))
+                                Text(snapshot.data!.docs[index].get('title'), style: TextStyle(fontSize: 18),),
+                                Text(snapshot.data!.docs[index].get('text'), style: TextStyle(color: Colors.grey),)
                               ],
                             )
                           ],
@@ -120,14 +123,14 @@ class _MainPageState extends State<MainPage> {
                                       );
                                     });
                               },
-                              icon: Icon(Icons.edit),),
+                              icon: Icon(Icons.edit, color: Colors.deepPurple[500],),),
 
                             IconButton(
                               onPressed: (){
                                 FirebaseFirestore.instance.collection('notes').
                                 doc(snapshot.data?.docs[index].id).delete();
                               },
-                              icon: Icon(Icons.delete),),
+                              icon: Icon(Icons.delete, color: Colors.deepPurple[500],),),
                           ],
                         ),
                       ),
